@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gender Prediction Service</title>
+</head>
+<body>
+    <h2>Gender Prediction Service</h2>
+    <form action="/predict" method="post" enctype="multipart/form-data">
+        <label for="file">Upload JSON File:</label>
+        <input type="file" id="file" name="file"><br><br>
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction_text %}
+        <h3>Prediction Result:</h3>
+        <p>{{ prediction_text }}</p>
+    {% endif %}
+</body>
+</html>
